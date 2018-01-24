@@ -1,3 +1,0 @@
- [exLockPIN=14] --defines which pin to toggle on event (for pins A0-A5 use 14-19)
- [exDelay=10000] -- defines delay on milliseconds to wait before changing state. Useful for syncing with audio event.
- [exHold=5000]  -- defines how long to hold the state change before returning it to idle
