@@ -27,8 +27,8 @@ The pins used by hardware is as follows:
   | 4  SD Chip Select | Needed for SD card support|
   | 5  ioPIN5| in service as digital toggle pin|
   | 6  DIALRDY_PIN    | Rotary dial at rest contacts|
-  | 7  ioPIN7| in service as digital toggle pin|
-  | 8  ioPIN8| in service as digital toggle pin|
+  | 7  ~ioPIN7~|~in service as digital toggle pin~|
+  | 8  ~ioPIN8~|~in service as digital toggle pin~|
   | 9  Speaker_PIN| Generated audio played via this pin 
   | 10 SPI SS         | Needed for SD card support|
   | 11 SPI MOSI |Needed for SD card support|
@@ -39,11 +39,12 @@ The pins used by hardware is as follows:
   
   
  Users may now use custom sound files which can be triggered by any 7 digit number dialed.
- The same dialed numbers may also be used to control any one of the 9 available digital pins states. 
+ The same dialed numbers may also be used to control any one of the ~9~ 7 available digital pins states.
+ (working on a bug that casues the code to misbehave when pins 7-8 are enabled)
 
   |Available Pins on UNO|
   |------------------------|
-  |Pin5,Pin7,Pin8,A0,A1,A2,A3,A4,A5|
+  |Pin5,~Pin7~,~Pin8~,A0,A1,A2,A3,A4,A5|
                          
  Sound Files:
 The system has a set of preloaded "generic bad destination" sound files stored in the stdsnd/ folder that are used when a number is dialed that is not matched to a custom .wav file
@@ -59,7 +60,7 @@ The next thing you will need to do is create a custom .loc file. This file can b
  
   |Inside the .loc file we will need to populate 3 variables:|
   |--------------------------------------------------------------------------------------------------------------------------------------------------------|
-  |  [exLockPIN=x] "x" being the pin # to use (5,7,8 or 14-19 for A0-A5)                                                                                                               |
+  |  [exLockPIN=x] "x" being the pin # to use (5,~7,8~ or 14-19 for A0-A5)                                                                                                               |
   | [exDelay=xxxx] "x" being the # of milliseconds to wait before the first state change. Useful if you want to sync with events playing in the recording.|
   | [exHold=xxxx] "x" being the # of milliseconds to wait before changing the state back to it's idle setting.                                            |
   
@@ -73,8 +74,8 @@ The idle default state of these pins are configured as such in the config.txt fi
  |CONFIG.TXT
  |----------------------------------------------|
  |[ioPIN5HL=1] digital pin 5  1 = HIGH / 0 = LOW|
- |[ioPIN7HL=0] digital pin 7  1 = HIGH / 0 = LOW|
- |[ioPIN8HL=1] digital pin 8  1 = HIGH / 0 = LOW|
+ |~[ioPIN7HL=0] digital pin 7  1 = HIGH / 0 = LOW~|
+ |~[ioPIN8HL=1] digital pin 8  1 = HIGH / 0 = LOW~|
  |[ioPIN14HL=0] analog A0     1 = HIGH / 0 = LOW|
  |[ioPIN15HL=1] analog A1     1 = HIGH / 0 = LOW|
  |[ioPIN16HL=0] analog A2     1 = HIGH / 0 = LOW|
