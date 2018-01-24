@@ -12,11 +12,14 @@ Oh, and of course, a Rotary Phone.
 ### Prerequisites
 You will also need to already be familiar with using the RotaryDialer library and how to wire the rotary dial into your project. 
 Becasue it's super easy, I'm not going to cover it.
+
 If you are planning on soldering wires from the SPI port directly to your SD card adaptor, Bravo! That's what I did and it works fantastic.
 I see no need to purchase an SD shield nor waste valuable space inside the phone.. 
 I selected to use the TMRPCM library in order to eliminate the need to use a wav shield. 
 All audio is processed and played back by the Arduino on pin 9. (again we save $$ and space).
 Both of the libraries I use are included in this repo.
+
+
 ### Installing
 The pins used by hardware is as follows:
 
