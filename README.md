@@ -68,7 +68,7 @@ The next thing you will need to do is create a custom .loc file. This file can b
  
   |Inside the .loc file we will need to populate 3 variables:|
   |--------------------------------------------------------------------------------------------------------------------------------------------------------|
-  |  [exLockPIN=x] "x" being the pin # to use (5,~7,8~ or 14-19 for A0-A5)                                                                                                               |
+  |  [exLockPIN=x] "x" being the pin # to use (5,7,8 or 14-19 for A0-A5)                                                                                                               |
   | [exDelay=xxxx] "x" being the # of milliseconds to wait before the first state change. Useful if you want to sync with events playing in the recording.|
   | [exHold=xxxx] "x" being the # of milliseconds to wait before changing the state back to it's idle setting.                                            |
   
@@ -76,10 +76,9 @@ The next thing you will need to do is create a custom .loc file. This file can b
 When the system is first started up the digital pins need to be configured to reflect your needs.
 normally this is done in the code prior to compiling and should something change with the installation you'd need to recompile every time.
 In this iteration I have built in the ability to set the pins up via config.txt
-Because several of the pins are in use by various aspects of the hardware the only free pins for digital switching are D5 and A0-A5, 7 pins.
-The idle default state of these pins are configured as such in the config.txt file.
+The idle default state of these pins are configured as such:
 
- |CONFIG.TXT
+ |CONFIG.TXT|
  |----------------------------------------------|
  |[ioPIN5HL=1] digital pin 5  1 = HIGH / 0 = LOW|
  |[ioPIN7HL=0] digital pin 7  1 = HIGH / 0 = LOW|
@@ -91,6 +90,9 @@ The idle default state of these pins are configured as such in the config.txt fi
  |[ioPIN18HL=0] analog A4     1 = HIGH / 0 = LOW|
  |[ioPIN19HL=1] analog A5     1 = HIGH / 0 = LOW|
 
+The file parser is only interested in the values contained between the [ and ], Anything else are just comments.
+
 You may change the default state of any or all of the pins, the settings presented here are just an example.
+
 NOTE: A recommended best practice would be to set any unused pins low.
 
