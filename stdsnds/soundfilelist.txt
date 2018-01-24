@@ -8,6 +8,6 @@ STDSNDS/DCERR.WAV  - Disconnected - 10sec
 STDSNDS/NOCALL.WAV - Call did not go through - 5.5 sec
 STDSNDS/TIMEOUT.WAV- Hang up and try again - 7sec
 STDSNDS/HOWLER.WAV - Off Hook Howler - 12.5sec
-STDSNDS/RND1.WAV - Scientist Laughing -- 30sec.  
+STDSNDS/RND1.WAV - Maniacal Laughing / Coughing -- 30sec.  
 STDSNDS/RND2.WAV - School answering service -- 1:18 
 STDSNDS/RND3.WAV - Female at office ansering machine -- 12sec.
