@@ -14,16 +14,36 @@ You will also need to already be familiar with using the RotaryDialer library an
 Becasue it's super easy, I'm not going to cover it.
 If you are planning on soldering wires from the SPI port directly to your SD card adaptor, Bravo! That's what I did and it works fantastic.
 I see no need to purchase an SD shield nor waste valuable space inside the phone.. 
-You will also need the TMRPCM library. I selected to use this library in order to eliminate the need to use a wav shield. 
+I selected to use the TMRPCM library in order to eliminate the need to use a wav shield. 
 All audio is processed and played back by the Arduino on pin 9. (again we save $$ and space).
 Both of the libraries I use are included in this repo.
 ### Installing
+The pins used by hardware is as follows:
+
+  | Pin/Name |Description|
+  |--------------|---------|
+  | 2 Handset_PIN   | Used to tell MCU when handset is On-Hook|
+  | 3 Pulse_PIN| Pulse contacts of Rotary Dial|
+  | 4  SD Chip Select | Needed for SD card support|
+  | 5  ioPIN5| in service as digital toggle pin|
+  | 6  DIALRDY_PIN    | Rotary dial at rest contacts|
+  | 7  ioPIN7| in service as digital toggle pin|
+  | 8  ioPIN8| in service as digital toggle pin|
+  | 9  Speaker_PIN| Generated audio played via this pin 
+  | 10 SPI SS         | Needed for SD card support|
+  | 11 SPI MOSI |Needed for SD card support|
+  | 12 SPI MISO     |   Needed for SD card support|
+  | 13 SPI SCK |Needed for SD card support|
+  | A0-A5|ioPIN14-ioPIN19 in service as digital toggle pin|
+
+  
+  
  Users may now use custom sound files which can be triggered by any 7 digit number dialed.
  The same dialed numbers may also be used to control any one of the 7 available digital pin states. 
 
   |Available Pins on UNO|
   |------------------------|
-  |Pin5, A0,A1,A2,A3,A4,A5|
+  |Pin5,Pin7,Pin8,A0,A1,A2,A3,A4,A5|
                          
  Sound Files:
 The system has a set of preloaded "generic bad destination" sound files stored in the stdsnd/ folder that are used when a number is dialed that is not matched to a custom .wav file
@@ -53,6 +73,8 @@ The idle default state of these pins are configured as such in the config.txt fi
  |CONFIG.TXT
  |----------------------------------------------|
  |[ioPIN5HL=1] digital pin 5  1 = HIGH / 0 = LOW|
+ |[ioPIN7HL=0] digital pin 7  1 = HIGH / 0 = LOW|
+ |[ioPIN8HL=1] digital pin 8  1 = HIGH / 0 = LOW|
  |[ioPIN14HL=0] analog A0     1 = HIGH / 0 = LOW|
  |[ioPIN15HL=1] analog A1     1 = HIGH / 0 = LOW|
  |[ioPIN16HL=0] analog A2     1 = HIGH / 0 = LOW|
@@ -61,5 +83,5 @@ The idle default state of these pins are configured as such in the config.txt fi
  |[ioPIN19HL=1] analog A5     1 = HIGH / 0 = LOW|
 
 You may change the default state of any or all of the pins, the settings presented here are just an example.
-A recommended best practice would be to set any unused pins low.
+NOTE: A recommended best practice would be to set any unused pins low.
 
