@@ -1,4 +1,6 @@
 [ioPIN5HL=1] digital pin 5  1 = HIGH / 0 = LOW
+[ioPIN7HL=0] digital pin 7  1 = HIGH / 0 = LOW
+[ioPIN8HL=1] digital pin 8  1 = HIGH / 0 = LOW
 [ioPIN14HL=0] analog A0	    1 = HIGH / 0 = LOW
 [ioPIN15HL=1] analog A1     1 = HIGH / 0 = LOW
 [ioPIN16HL=0] analog A2     1 = HIGH / 0 = LOW
