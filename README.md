@@ -39,7 +39,7 @@ The pins used by hardware is as follows:
   
   
  Users may now use custom sound files which can be triggered by any 7 digit number dialed.
- The same dialed numbers may also be used to control any one of the 7 available digital pin states. 
+ The same dialed numbers may also be used to control any one of the 9 available digital pins states. 
 
   |Available Pins on UNO|
   |------------------------|
@@ -59,7 +59,7 @@ The next thing you will need to do is create a custom .loc file. This file can b
  
   |Inside the .loc file we will need to populate 3 variables:|
   |--------------------------------------------------------------------------------------------------------------------------------------------------------|
-  |  [exLockPIN=x] "x" being the pin # to use (5 or 14-19 for A0-A5)                                                                                                               |
+  |  [exLockPIN=x] "x" being the pin # to use (5,7,8 or 14-19 for A0-A5)                                                                                                               |
   | [exDelay=xxxx] "x" being the # of milliseconds to wait before the first state change. Useful if you want to sync with events playing in the recording.|
   | [exHold=xxxx] "x" being the # of milliseconds to wait before changing the state back to it's idle setting.                                            |
   
