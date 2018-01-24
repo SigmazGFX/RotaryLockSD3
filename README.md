@@ -21,7 +21,7 @@ Both of the libraries I use are included in this repo.
 
 
 ### Installing
-Flash the HEX file to your UNO using the supplied XLoader flasher.
+Flash the HEX file to your UNO using the XLoader flasher found at http://www.hobbytronics.co.uk/arduino-xloader.
 Copy the /stdsnds folder and its contents as well as the example config.txt, .wav, and .loc files in the repo to the root of the SD card.
 Do not copy the RotaryDialer or TMRPCM libraries to your SD card those are for reference only.
 
