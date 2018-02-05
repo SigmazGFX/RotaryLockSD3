@@ -7,4 +7,3 @@
 [ioPIN17HL=1] analog A3     1 = HIGH / 0 = LOW
 [ioPIN18HL=0] analog A4     1 = HIGH / 0 = LOW
 [ioPIN19HL=1] analog A5     1 = HIGH / 0 = LOW
-
